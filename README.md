@@ -33,7 +33,7 @@ Distillation can be performed by running the following command:
 ```shell
 bash run.sh
 ```
-The defualt hyperparameters values are set to ones used in the paper. Modify the teacher and student architectures as necessary. Set the approapriate paths for the ImageNet dataset root and the experiment root. The current code will generate a directory named ```exp_dir``` containing ```checkpoints``` and ```logs``` sub-directories.
+Training with ResNet-50 teacher and ResNet-18 student requires nearly 2.5 days on 4 2080ti GPUs (~26m/epoch). The defualt hyperparameters values are set to ones used in the paper. Modify the teacher and student architectures as necessary. Set the approapriate paths for the ImageNet dataset root and the experiment root. The current code will generate a directory named ```exp_dir``` containing ```checkpoints``` and ```logs``` sub-directories.
 
 ## Evaluation
 
@@ -54,3 +54,31 @@ Here, we train a single linear layer atop the CNN backbone using an SGD optimize
 bash lin_eval.sh
 ```
 The evaluation results are stored in ```exp_dir/linear/``` path. Set the ```use_cache``` argument in the bash script to use cached features for evaluation. Using this argument will result in a single round of feature calculation for caching and 40 epochs of linear layer training using the cached features. While it usually results in slightly reduced performance, it can be used for faster evaluation of intermediate checkpoints.
+
+## Pretrained Models
+
+To evaluate the pretrained models, create an experiment root directory ```exp_dir``` and place the checkpoint in ```exp_dir/checkpoints/```. Set the ```exp``` argument in the evaluation bash scripts to perform k-NN and linear evaluation.   
+
+| Teacher | Student | 1-NN | Linear |
+| ------- | ------- | ---- | ------ |
+| MoCo-v2 ResNet-50 | [MobileNet-v2](https://drive.google.com/drive/folders/1sxd0dmgVDxqGCgg1BaOOWCT3aQHwSMqu?usp=sharing) | 55.5 | 69.1 |
+| MoCo-v2 ResNet-50 | [ResNet-18](https://drive.google.com/file/d/1rKWBf5Tf9lsCbz-aJz30otIQWFMsnICX/view?usp=sharing) | 54.8 | 65.1 |
+| MoCo-v2 ResNet-50x4 | [ResNet-50](https://drive.google.com/file/d/1R_Ljmd9GMAtUTwLtM61r_cngqVsaQUFh/view?usp=sharing) | 60.3 | 74.2 |
+| BYOL ResNet-50 | [ResNet-18](https://drive.google.com/file/d/19_q_je5p2ItPv47yvVVqLy4wL46nagRn/view?usp=sharing) | 56.7 | 66.8 |
+| SwAV ResNet-50 | [ResNet-18](https://drive.google.com/file/d/1eW0aCdqctm4hTXIuxyxNFc6rrQFUcYsu/view?usp=sharing) | 54.0 | 65.8 |
+
+## Citation
+
+If you make use of the code, please cite the following work:
+```
+@inproceedings{navaneet2021simreg,
+ author = {Navaneet, K L and Koohpayegani, Soroush Abbasi and Tejankar, Ajinkya and Pirsiavash, Hamed},
+ booktitle = {British Machine Vision Conference (BMVC)},
+ title = {SimReg: Regression as a Simple Yet Effective Tool for Self-supervised Knowledge Distillation},
+ year = {2021}
+}
+```
+
+## License
+
+This project is under the MIT license.
