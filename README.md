@@ -67,6 +67,12 @@ To evaluate the pretrained models, create an experiment root directory ```exp_di
 | [BYOL ResNet-50](https://drive.google.com/file/d/1AN2XGuXat2OHDPNPR5E-j2znbhy5n6YS/view?usp=sharing) | [ResNet-18 (cached)](https://drive.google.com/file/d/19_q_je5p2ItPv47yvVVqLy4wL46nagRn/view?usp=sharing) | 56.7 | 66.8 |
 | [SwAV ResNet-50 (cached)](https://dl.fbaipublicfiles.com/deepcluster/swav_400ep_bs256_pretrain.pth.tar) | [ResNet-18](https://drive.google.com/file/d/1eW0aCdqctm4hTXIuxyxNFc6rrQFUcYsu/view?usp=sharing) | 54.0 | 65.8 |
 
+## TODO
+
+- Add code for transfer learning evaluation
+- Reformat evaluation codes
+- Add code to evaluate models at different stages of CNN backbone and MLP head
+
 ## Citation
 
 If you make use of the code, please cite the following work:
