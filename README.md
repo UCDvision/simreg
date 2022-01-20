@@ -63,8 +63,8 @@ To evaluate the pretrained models, create an experiment root directory ```exp_di
 | ------- | ------- | ---- | ------ |
 | [MoCo-v2 ResNet-50](https://dl.fbaipublicfiles.com/moco/moco_checkpoints/moco_v2_800ep/moco_v2_800ep_pretrain.pth.tar) | [MobileNet-v2](https://drive.google.com/drive/folders/1sxd0dmgVDxqGCgg1BaOOWCT3aQHwSMqu?usp=sharing) | 55.5 | 69.1 |
 | MoCo-v2 ResNet-50 | [ResNet-18](https://drive.google.com/file/d/1rKWBf5Tf9lsCbz-aJz30otIQWFMsnICX/view?usp=sharing) | 54.8 | 65.1 |
-| [SimCLR ResNet-50x4](https://drive.google.com/file/d/1fZ2gfHRjVSFz9Hf2PHsPUao9ZKmUXg4z/view?usp=sharing) | [ResNet-50 (cached)](https://drive.google.com/file/d/1R_Ljmd9GMAtUTwLtM61r_cngqVsaQUFh/view?usp=sharing) | 60.3 | 74.2 |
-| [BYOL ResNet-50](https://drive.google.com/file/d/1AN2XGuXat2OHDPNPR5E-j2znbhy5n6YS/view?usp=sharing) | [ResNet-18 (cached)](https://drive.google.com/file/d/19_q_je5p2ItPv47yvVVqLy4wL46nagRn/view?usp=sharing) | 56.7 | 66.8 |
+| [SimCLR ResNet-50x4 (cached)](https://drive.google.com/file/d/1fZ2gfHRjVSFz9Hf2PHsPUao9ZKmUXg4z/view?usp=sharing) | [ResNet-50](https://drive.google.com/file/d/1R_Ljmd9GMAtUTwLtM61r_cngqVsaQUFh/view?usp=sharing) | 60.3 | 74.2 |
+| [BYOL ResNet-50 (cached)](https://drive.google.com/file/d/1AN2XGuXat2OHDPNPR5E-j2znbhy5n6YS/view?usp=sharing) | [ResNet-18](https://drive.google.com/file/d/19_q_je5p2ItPv47yvVVqLy4wL46nagRn/view?usp=sharing) | 56.7 | 66.8 |
 | [SwAV ResNet-50 (cached)](https://dl.fbaipublicfiles.com/deepcluster/swav_400ep_bs256_pretrain.pth.tar) | [ResNet-18](https://drive.google.com/file/d/1eW0aCdqctm4hTXIuxyxNFc6rrQFUcYsu/view?usp=sharing) | 54.0 | 65.8 |
 
 ## TODO
